@@ -21,6 +21,8 @@ public class DemoController {
 
     @GetMapping("welcome")
     public String welcome(Model model) {
+        model.addAttribute("user", "Simon");
+        log.info("model = {}", model);
         // prefix + name + suffix
         // /WEB-INF/view/welcome.jsp
         return "welcome";
