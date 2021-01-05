@@ -16,8 +16,7 @@ public class TodoItem {
     private LocalDate deadline;
 
     // == constructors ==
-    public TodoItem(int id, String title, String details, LocalDate deadline) {
-        this.id = id;
+    public TodoItem(String title, String details, LocalDate deadline) {
         this.title = title;
         this.details = details;
         this.deadline = deadline;

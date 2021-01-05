@@ -1,6 +1,6 @@
 package academy.learnprogramming.controller;
 
-import academy.learnprogramming.model.ToDoData;
+import academy.learnprogramming.model.TodoData;
 import academy.learnprogramming.util.Mappings;
 import academy.learnprogramming.util.ViewNames;
 import org.springframework.stereotype.Controller;
@@ -12,8 +12,8 @@ public class ToDoItemController {
 
     // == model attributes ==
     @ModelAttribute
-    public ToDoData toDoData() {
-        return new ToDoData();
+    public TodoData toDoData() {
+        return new TodoData();
     }
 
     // http://localhost:8080/todo-list-spring/items
