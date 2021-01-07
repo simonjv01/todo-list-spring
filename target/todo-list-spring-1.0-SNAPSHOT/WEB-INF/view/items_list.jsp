@@ -14,6 +14,7 @@
 
             <tr>
                 <th>Title</th>
+                <th>Todo Details</th>
                 <th>Deadline</th>
             </tr>
 
@@ -21,6 +22,7 @@
 
                 <tr>
                     <td><c:out value="${item.title}"/> </td>
+                    <td><c:out value="${item.details}"/> </td>
                     <td><c:out value="${item.deadline}"/> </td>
                 </tr>
             </c:forEach>
