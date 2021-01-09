@@ -1,31 +1,44 @@
 
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="academy.learnprogramming.util.AttributeNames" %>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Todo Items</title>
+    <title>Add Items</title>
 </head>
 <body>
     <div align="center">
-        <table border="1" cellpadding="5">
-
-            <caption><h2>Todo Items</h2></caption>
-
-            <tr>
-                <th>Title</th>
-                <th>Deadline</th>
-            </tr>
-
-            <c:forEach var="item" items="${todoData.items}">
-
+        <form:form method="post" modelAttribute="${AttributeNames.TODO_ITEM}">
+            <table>
                 <tr>
-                    <td><c:out value="${item.title}"/> </td>
-                    <td><c:out value="${item.deadline}"/> </td>
+                    <td><label>ID</label></td>
+                    <td>
+                        <form:input path="id" disabled="true" />
+                    </td>
                 </tr>
-            </c:forEach>
-        </table>
+                <tr>
+                    <td><label>Title</label></td>
+                    <td><form:input path="title"/></td>
+                </tr>
+                <tr>
+                    <td><label>Deadline</label></td>
+                    <td><form:input path="deadline"/></td>
+                </tr>
+                <tr>
+                    <td><label>Details</label></td>
+                    <td><form:textarea path="details"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"/></td>
+                </tr>
+            </table>
+
+        </form:form>
+        
     </div>
+
+
 
 </body>
 </html>
