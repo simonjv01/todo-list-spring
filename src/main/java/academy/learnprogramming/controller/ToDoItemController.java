@@ -44,8 +44,12 @@ public class ToDoItemController {
     }
 
     @GetMapping(Mappings.ADD_ITEM)
-    public String addEditItem(Model model) {
+    public String addEditItem(@RequestParam(required = false, defaultValue = "-1") int id,
+                              Model model) {
+        log.info("editing id = {}", id);
         TodoItem todoItem = new TodoItem("","", LocalDate.now());
+
+        TodoItem todoItem = new TodoItem("","",LocalDate.now());
         model.addAttribute(AttributeNames.TODO_ITEM, todoItem);
         return ViewNames.ADD_ITEM;
 
