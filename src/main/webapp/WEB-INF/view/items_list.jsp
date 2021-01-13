@@ -35,7 +35,7 @@
                 <tr>
                     <td><c:out value="${item.title}"/> </td>
                     <td><c:out value="${item.deadline}"/> </td>
-                    <td><a href="${editUrl}">Delete</a> </td>
+                    <td><a href="${editUrl}">Edit</a> </td>
                     <td><a href="${deleteUrl}">Delete</a> </td>
                 </tr>
             </c:forEach>
