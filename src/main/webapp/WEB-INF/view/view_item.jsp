@@ -37,7 +37,8 @@
 
         </table>
 
-
+        <c:url var="tableUrl" value="${Mappings.ITEMS}" />
+        <a href="${tableUrl}">Show Table</a>
         
     </div>
 
